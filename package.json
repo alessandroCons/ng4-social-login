@@ -1,5 +1,5 @@
 {
-  "name": "ng4-social-login",
+  "name": "ng4-social-login-test",
   "version": "1.3.4",
   "scripts": {
     "build": "gulp build",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sarfarazansari/ng4-social-login"
+    "url": "https://github.com/alessandroCons/ng4-social-login-test/"
   },
   "author": {
     "name": "Sarfaraz Ansari",
@@ -31,7 +31,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sarfarazansari/ng4-social-login/issues"
+    "url": "https://github.com/alessandroCons/ng4-social-login-test/issues"
   },
   "devDependencies": {
     "@angular/common": "^4.0.0",
