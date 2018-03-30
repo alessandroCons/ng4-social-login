@@ -17,7 +17,6 @@ check out [Docs](https://sarfarazansari.github.io/ng4-social-login/)
 ### Install via npm 
 
 ```sh
-npm install --save ng4-social-login
 ```
 
 ### Import the module
