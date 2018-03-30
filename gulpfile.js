@@ -6,7 +6,8 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
   del = require('del'),
   runSequence = require('run-sequence'),
-  inlineResources = require('./tools/gulp/inline-resources');
+  inlineResources = require('./tools/gulp/inline-resources'),
+  nodeResolve = require ('rollup-plugin-node-resolve');
 
 const rootFolder = path.join(__dirname);
 const srcFolder = path.join(rootFolder, 'src');
@@ -80,6 +81,25 @@ gulp.task('rollup:fesm', function () {
       // when subdirectories are used in the `src` directory.
       allowRealFiles: true,
 
+      /*plugins: [
+             // includePaths({
+             //     paths: ['node_modules/d3/node_modules']  // for npm 2
+             // }),
+             nodeResolve({
+                 module: true,
+                 main: true,
+                 browser: false
+             })
+    ],*/
+    plugins: [
+      nodeResolve({
+          module: true,
+          main: true,
+          browser: false,
+          modulesOnly: true
+      })
+    ],
+
       // A list of IDs of modules that should remain external to the bundle
       // See https://github.com/rollup/rollup/wiki/JavaScript-API#external
       external: [
@@ -112,6 +132,15 @@ gulp.task('rollup:umd', function () {
       // This prevents errors like: 'path/file' does not exist in the hypothetical file system
       // when subdirectories are used in the `src` directory.
       allowRealFiles: true,
+
+      plugins: [
+        nodeResolve({
+            module: true,
+            main: true,
+            browser: false,
+            modulesOnly: true
+        })
+      ],
 
       // A list of IDs of modules that should remain external to the bundle
       // See https://github.com/rollup/rollup/wiki/JavaScript-API#external
