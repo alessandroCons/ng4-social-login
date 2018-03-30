@@ -7,7 +7,8 @@ var gulp = require('gulp'),
   del = require('del'),
   runSequence = require('run-sequence'),
   inlineResources = require('./tools/gulp/inline-resources'),
-  nodeResolve = require ('rollup-plugin-node-resolve');
+  nodeResolve = require ('rollup-plugin-node-resolve'),
+  commonjs = require ('rollup-plugin-commonjs');
 
 const rootFolder = path.join(__dirname);
 const srcFolder = path.join(rootFolder, 'src');
@@ -92,12 +93,17 @@ gulp.task('rollup:fesm', function () {
              })
     ],*/
     plugins: [
-      nodeResolve({
+      nodeResolve(/*{
           module: true,
           main: true,
           browser: false,
-          modulesOnly: true
-      })
+          //modulesOnly: true
+      }*/),
+      commonjs(/*{
+            include:
+                'node_modules/**',
+
+        }*/)
     ],
 
       // A list of IDs of modules that should remain external to the bundle
@@ -134,12 +140,13 @@ gulp.task('rollup:umd', function () {
       allowRealFiles: true,
 
       plugins: [
-        nodeResolve({
+        nodeResolve(/*{
             module: true,
             main: true,
             browser: false,
-            modulesOnly: true
-        })
+            //modulesOnly: true
+        }*/),
+        commonjs()
       ],
 
       // A list of IDs of modules that should remain external to the bundle
