@@ -93,12 +93,12 @@ gulp.task('rollup:fesm', function () {
              })
     ],*/
     plugins: [
-      nodeResolve(/*{
+      nodeResolve({
           module: true,
           main: true,
           browser: false,
           //modulesOnly: true
-      }*/),
+      }),
       commonjs(/*{
             include:
                 'node_modules/**',
@@ -140,12 +140,12 @@ gulp.task('rollup:umd', function () {
       allowRealFiles: true,
 
       plugins: [
-        nodeResolve(/*{
+        nodeResolve({
             module: true,
             main: true,
             browser: false,
             //modulesOnly: true
-        }*/),
+        }),
         commonjs()
       ],
 
@@ -167,7 +167,7 @@ gulp.task('rollup:umd', function () {
       // The name to use for the module for UMD/IIFE bundles
       // (required for bundles with exports)
       // See https://github.com/rollup/rollup/wiki/JavaScript-API#modulename
-      moduleName: 'ng4-social-login',
+      moduleName: 'ng4-social-login-test',
 
       // See https://github.com/rollup/rollup/wiki/JavaScript-API#globals
       globals: {
@@ -175,7 +175,7 @@ gulp.task('rollup:umd', function () {
       }
 
     }))
-    .pipe(rename('ng4-social-login.umd.js'))
+    .pipe(rename('ng4-social-login-test.umd.js'))
     .pipe(gulp.dest(distFolder));
 });
 

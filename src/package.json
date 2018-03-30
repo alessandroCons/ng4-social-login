@@ -14,7 +14,7 @@
     "angular4",
     "ng4",
     "social authentication",
-    "angular-social-login",
+    "angular-social-login-test",
     "social-authentication",
     "social-login",
     "google-authentication",
@@ -24,10 +24,10 @@
   "bugs": {
     "url": "https://github.com/alessandroCons/ng4-social-login-test/issues"
   },
-  "main": "ng4-social-login.umd.js",
-  "module": "ng4-social-login.js",
-  "jsnext:main": "ng4-social-login.js",
-  "typings": "ng4-social-login.d.ts",
+  "main": "ng4-social-login-test.umd.js",
+  "module": "ng4-social-login-test.js",
+  "jsnext:main": "ng4-social-login-test.js",
+  "typings": "ng4-social-login-test.d.ts",
   "peerDependencies": {
     "@angular/common": "^4.0.0",
     "@angular/core": "^4.0.0",

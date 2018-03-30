@@ -1510,4 +1510,7 @@ var LinkedinLoginProvider = (function (_super) {
 }(BaseLoginProvider));
 LinkedinLoginProvider.PROVIDER_ID = 'LINKEDIN';
 
+//added to fix errors?
+//end added
+
 export { SocialLoginModule, AuthService, AuthServiceConfig, SocialUser, LoginProviderClass, LinkedInResponse, FacebookLoginProvider, GoogleLoginProvider, LinkedinLoginProvider };

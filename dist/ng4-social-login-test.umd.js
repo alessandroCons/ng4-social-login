@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common')) :
 	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/common'], factory) :
-	(factory((global['ng4-social-login'] = global['ng4-social-login'] || {}),global._angular_core,global._angular_common));
+	(factory((global['ng4-social-login-test'] = global['ng4-social-login-test'] || {}),global._angular_core,global._angular_common));
 }(this, (function (exports,_angular_core,_angular_common) { 'use strict';
 
 var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
@@ -1512,6 +1512,9 @@ var LinkedinLoginProvider = (function (_super) {
     return LinkedinLoginProvider;
 }(BaseLoginProvider));
 LinkedinLoginProvider.PROVIDER_ID = 'LINKEDIN';
+
+//added to fix errors?
+//end added
 
 exports.SocialLoginModule = SocialLoginModule;
 exports.AuthService = AuthService;
