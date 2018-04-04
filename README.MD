@@ -12,7 +12,6 @@ Supports authentication with **Google**, **Linkedin** and **Facebook**.
 
 ### Documentation
 
-check out [Docs](https://sarfarazansari.github.io/ng4-social-login/)
 
 ### Install via npm 
 
