@@ -1396,11 +1396,11 @@ var FacebookLoginProvider = (function (_super) {
             FB.login(function (response) {
                 if (response.authResponse) {
                     var /** @type {?} */ accessToken_2 = FB.getAuthResponse()['accessToken'];
-                    FB.api('/me?fields=name,email,picture', function (res) {
+                    FB.api('/me?fields=name,email,picture', /* '/me?fields=name,email,picture', */ function (res) {
                         resolve(FacebookLoginProvider.drawUser(Object.assign({}, { token: accessToken_2 }, res)));
                     });
                 }
-            }, { scope: 'email,public_profile' });
+            }, { scope: 'email' }); /*{ scope: 'email,public_profile' });*/
         });
     };
     /**
