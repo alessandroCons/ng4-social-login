@@ -54,11 +54,11 @@ export class FacebookLoginProvider extends BaseLoginProvider {
       FB.login((response: any) => {
         if (response.authResponse) {
           const accessToken = FB.getAuthResponse()['accessToken'];
-          FB.api('/me?fields=name,email,picture', (res: any) => {
+          FB.api('/me?fields=name,email,picture', /* '/me?fields=name,email,picture', */ (res: any) => {
             resolve(FacebookLoginProvider.drawUser(Object.assign({}, {token: accessToken}, res)));
           });
         }
-      }, { scope: 'email,public_profile' });
+      }, { scope: 'email' }); /*{ scope: 'email,public_profile' });*/
     });
   }
 
